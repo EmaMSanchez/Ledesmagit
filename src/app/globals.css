@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.placeholderInput::placeholder {
+    color: black;
+    font-weight: bold;
+}
+.placeholderImage {
+    background-image: url('/busqueda.png');
+    background-repeat: no-repeat;
+  background-position: 30px ;
+  background-size: 20px 20px; /* Ajusta esto a las dimensiones deseadas */
+  padding-left: px
+  }
+ 
