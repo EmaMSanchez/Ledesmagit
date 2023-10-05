@@ -5,7 +5,7 @@ import React from 'react'
 const DetailProyecto = () => {
   return (
     <main className="flex  flex-col items-center justify-between p-24">
-      <h1>Detail Proyecto</h1>
+      <h1>Detalle Proyecto</h1>
     </main>
 
   )
