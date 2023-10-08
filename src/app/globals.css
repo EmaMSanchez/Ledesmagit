@@ -10,8 +10,14 @@
 .placeholderImage {
     background-image: url('/busqueda.png');
     background-repeat: no-repeat;
-  background-position: 30px ;
+  background-position: 14px ;
   background-size: 20px 20px; /* Ajusta esto a las dimensiones deseadas */
-  padding-left: px
+  }
+
+  .placeholderImage2 {
+    background-image: url('/busqueda.png');
+    background-repeat: no-repeat;
+  background-position: 10px ;
+  background-size: 28px 28px; /* Ajusta esto a las dimensiones deseadas */
   }
  
