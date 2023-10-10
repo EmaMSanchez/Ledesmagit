@@ -32,8 +32,8 @@ return (
           </Link>
         </div>
         <div className="flex items-center">
-          <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full focus:ring-gray-300" id="user-menu-button" onClick={redirect}>
-            <img className="w-8 h-8 rounded-full" src='/20181125_235320.jpg' alt="user photo" />
+          <button type="button" className="flex mr-3 text-sm bg-white rounded-full focus:ring-gray-300" id="user-menu-button" onClick={redirect}>
+            <img className="w-8 h-8 rounded-full" src='/perfil.com.png' alt="user photo" />
           </button>
         </div>
       </div>

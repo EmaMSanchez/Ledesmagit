@@ -19,17 +19,28 @@ export default function Home() {
       <Buscador/>
      </div>
      <div className="container w-[1000px]">
-      <div className=" mt-16 text-left pl-[5px]">
-        <h1 className="text-[24px] h-[28px] font-light"><span className="text-[32px] h-[38px] text-black font-bold">Proyectos</span> Lo màs destacado</h1>
+      <div className=" mt-16 text-left pl-[5px] flex justify-between">
+        <h1 className="text-[24px] h-[28px] font-light"><span className="text-[32px] h-[38px] text-black font-bold mr-3">Proyectos</span> Lo màs destacado</h1>
+        <div className="flex items-center">
+    <p className="text-[14px] font-normal mr-2">LO MAS DESTACADO</p>
+    <img src="/pngwing.com.png" className="w-[7.7px]" alt="Icono" />
+  </div>
        </div>
        <div className="container flex justify-between mt-14 gap-12 ">
             <CardDestacado/>
             <CardDestacado/>
             <CardDestacado/>
        </div>
-       <div className=" mt-16 text-left pl-[5px]">
-        <h1 className="text-[24px] h-[28px] font-light"><span className="text-[32px] h-[38px] text-black font-bold">Sub Proyectos</span> Ùltimos disponibles</h1>
-       </div>
+       <div className="mt-16 text-left pl-[5px] flex justify-between items-center">
+  <h1 className="text-[24px] h-[28px] font-light">
+    <span className="text-[32px] h-[38px] text-black font-bold mr-3">Sub Proyectos </span>  
+    Últimos disponibles
+  </h1>
+  <div className="flex items-center">
+    <p className="text-[14px] font-normal mr-2">ÚLTIMOS DISPONIBLES</p>
+    <img src="/pngwing.com.png" className="w-[7.7px]" alt="Icono" />
+  </div>
+</div>
        <div className="container flex justify-between mt-14 gap-12 ">
             <CardSubProyectos/>
             <CardSubProyectos/>
