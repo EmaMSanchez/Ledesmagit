@@ -173,7 +173,6 @@ const subImagenes = [
         </div>
       </div>
       <div>
-      
       <div className="mt-16 text-left pl-[5px] flex justify-between items-center">
   <h1 className="text-[24px] h-[28px] font-light">
     <span className="text-[32px] h-[38px] text-black font-bold mr-3">Sub Proyectos </span>  
