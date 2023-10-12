@@ -18,32 +18,32 @@ const DetailDesarrollo = () => {
 
   const subImagenes = [
     <img
-            src=""
+            src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />,
           <img
-            src=""
+          src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />,
           <img
-            src=""
+          src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />,
           <img
-            src=""
+          src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />,
           <img
-            src=""
+          src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />,
           <img
-            src=""
+          src="#"
             alt=""
             className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
           />
@@ -73,6 +73,33 @@ const DetailDesarrollo = () => {
     "Luminoso",
     "Cochera Fija",
     "Ascensor"
+  ];
+
+ 
+
+  const propiedades = [
+
+    {
+      direccion: "Libertad 4838",
+      ambientes:6,
+      dormitorios:4,
+      supCubierta:"24 m²",
+      supTotal:"40 m²",
+      cochera:"SI",
+      venta:"U$D 40.000",
+      alquiler:"-"
+    },
+    {
+      direccion: "Libertad 4838",
+      ambientes:6,
+      dormitorios:4,
+      supCubierta:"24 m²",
+      supTotal:"40 m²",
+      cochera:"NO",
+      venta:"U$D 40.000",
+      alquiler:"$30000"
+    }
+
   ];
 
   return (
@@ -110,6 +137,7 @@ const DetailDesarrollo = () => {
            <button className=' rounded-[6px] h-10 w-[177px] text-center placeholderImage bg-black text-white hover:translate-y-[-2px] transition-all drop-shadow-md  hover:drop-shadow-xl'>CONTACTARSE</button>
         </div>
       </div>
+      
       <div className="container mt-20 w-[810px] h-[451] mr-[410px]">
         <div className="container border-b-2 w-[780px]">
           <h3 className="font-light text-[24px]">DESCRIPCION</h3>
@@ -163,8 +191,33 @@ const DetailDesarrollo = () => {
     </div>
   ))}
 </div>
-        <div>
+<div className="container border-b-2 w-[780px] mt-14">
+          <h3 className="font-light text-[24px]">UNIDADES</h3>
         </div>
+        <div className="bg-gray-300 rounded-t-[8px] h-14 mt-5 items-center flex justify-between gap-6">
+    <p className="text-[14px] font-semibold grow text-center ml-6">Direccion</p>
+    <p className="text-[14px] font-semibold">Ambientes</p>
+    <p className="text-[14px] font-semibold">Dormitorios</p>
+    <p className="text-[14px] font-semibold w-20 text-center">Superficie Cubierta</p>
+    <p className="text-[14px] font-semibold w-20 text-center">Superficie Total</p>
+    <p className="text-[14px] font-semibold">Cochera</p>
+    <p className="text-[14px] font-semibold w-20 text-center">Venta</p>
+    <p className="text-[14px] font-semibold mr-4">Alquiler</p>
+</div>
+<div className=" container ">
+  {propiedades.map((propiedad,index) => (
+    <div key={index} className=" flex justify-between mt-4 ">
+              <p className="text-center w-28 ml-4 text-[12px]">{propiedad.direccion}</p>
+              <p className="text-center w-28 ml-4 text-[12px]">{propiedad.ambientes}</p>
+              <p className="text-center w-28 ml-[-16px] text-[12px]">{propiedad.dormitorios}</p>
+              <p className="text-center w-28  text-[12px]">{propiedad.supCubierta}</p>
+              <p className="text-center w-28 mr-[-10px] text-[12px]">{propiedad.supTotal}</p>
+              <p className="text-center w-28 mr-[-8px] text-[12px]">{propiedad.cochera}</p>
+              <p className="text-center w-28 mr-[-23px] text-[12px]">{propiedad.venta}</p>
+              <p className="text-center w-28 mr-[-8px] text-[12px]">{propiedad.alquiler}</p>
+    </div>
+  ))}
+</div>
       </div>
     </main>
   );
