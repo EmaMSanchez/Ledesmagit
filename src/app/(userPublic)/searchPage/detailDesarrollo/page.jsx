@@ -169,7 +169,7 @@ const DetailDesarrollo = () => {
       ))}
     </div>
         </div>
-        <div className="container border-b-2 w-[780px] mt-14">
+        <div className="container border-b-2 w-[820px] mt-14">
   <h3 className="font-light text-[24px]">SERVICIOS</h3>
 </div>
 <div className="grid grid-cols-3 gap-3 mt-6">
@@ -180,7 +180,7 @@ const DetailDesarrollo = () => {
     </div>
   ))}
 </div>
-        <div className="container border-b-2 w-[780px] mt-14">
+        <div className="container border-b-2 w-[820px] mt-14">
           <h3 className="font-light text-[24px]">ADICIONALES</h3>
         </div>
         <div className="grid grid-cols-3 gap-3 mt-6">
@@ -191,7 +191,7 @@ const DetailDesarrollo = () => {
     </div>
   ))}
 </div>
-<div className="container border-b-2 w-[780px] mt-14">
+<div className="container border-b-2 w-[820px] mt-14">
           <h3 className="font-light text-[24px]">UNIDADES</h3>
         </div>
         <div className="bg-gray-300 rounded-t-[8px] h-14 mt-5 items-center flex justify-between gap-6">
@@ -207,14 +207,14 @@ const DetailDesarrollo = () => {
 <div className=" container ">
   {propiedades.map((propiedad,index) => (
     <div key={index} className=" flex justify-between mt-4 ">
-              <p className="text-center w-28 ml-4 text-[12px]">{propiedad.direccion}</p>
-              <p className="text-center w-28 ml-4 text-[12px]">{propiedad.ambientes}</p>
-              <p className="text-center w-28 ml-[-16px] text-[12px]">{propiedad.dormitorios}</p>
-              <p className="text-center w-28  text-[12px]">{propiedad.supCubierta}</p>
-              <p className="text-center w-28 mr-[-10px] text-[12px]">{propiedad.supTotal}</p>
-              <p className="text-center w-28 mr-[-8px] text-[12px]">{propiedad.cochera}</p>
-              <p className="text-center w-28 mr-[-23px] text-[12px]">{propiedad.venta}</p>
-              <p className="text-center w-28 mr-[-8px] text-[12px]">{propiedad.alquiler}</p>
+              <p className="text-center w-28 ml-4 text-[13px]">{propiedad.direccion}</p>
+              <p className="text-center w-28 ml-2 text-[13px]">{propiedad.ambientes}</p>
+              <p className="text-center w-28 ml-[-16px] text-[13px]">{propiedad.dormitorios}</p>
+              <p className="text-center w-28  text-[13px]">{propiedad.supCubierta}</p>
+              <p className="text-center w-28 mr-[-14px] text-[13px]">{propiedad.supTotal}</p>
+              <p className="text-center w-28 mr-[-8px] text-[13px]">{propiedad.cochera}</p>
+              <p className="text-center w-28 mr-[-23px] text-[13px]">{propiedad.venta}</p>
+              <p className="text-center w-28 mr-[-10px] text-[13px]">{propiedad.alquiler}</p>
     </div>
   ))}
 </div>

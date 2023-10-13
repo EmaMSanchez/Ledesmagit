@@ -74,9 +74,31 @@ const DetailProyecto = () => {
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
   ];
+  const propiedades = [
+    {
+      direccion: "Libertad 4838",
+      ambientes: 6,
+      dormitorios: 4,
+      supCubierta: "24 m²",
+      supTotal: "40 m²",
+      cochera: "SI",
+      venta: "U$D 40.000",
+      alquiler: "-",
+    },
+    {
+      direccion: "Libertad 4838",
+      ambientes: 6,
+      dormitorios: 4,
+      supCubierta: "24 m²",
+      supTotal: "40 m²",
+      cochera: "NO",
+      venta: "U$D 40.000",
+      alquiler: "$30000",
+    },
+  ];
 
   return (
-    <main className="flex flex-col items-center justify-between p-16">
+    <main className="flex flex-col items-center p-16">
       <div className="container flex gap-[250px] ml-[90px]">
         <h1 className="text-[64px] mt-10 inline-block">{tituloProyecto}</h1>
         <div className="grid grid-rows-2 grid-flow-col mt-16 gap-6 overflow-visible">
@@ -106,7 +128,7 @@ const DetailProyecto = () => {
         </div>
       </div>
       <div className="container mt-20 w-[810px] h-[451] mr-[410px]">
-        <div className="container border-b-2 w-[780px]">
+        <div className="container border-b-2 w-[810px]">
           <h3 className="font-light text-[24px]">DESCRIPCION</h3>
         </div>
         <div className="whitespace-pre-line mt-4">
@@ -145,7 +167,7 @@ const DetailProyecto = () => {
             <br />
           </div>
         </div>
-        <div className="container border-b-2 w-[780px] mt-14">
+        <div className="container border-b-2 w-[820px] mt-14">
           <h3 className="font-light text-[24px]">SERVICIOS</h3>
         </div>
         <div className="grid grid-cols-3 gap-3 mt-6">
@@ -156,7 +178,7 @@ const DetailProyecto = () => {
             </div>
           ))}
         </div>
-        <div className="container border-b-2 w-[780px] mt-14">
+        <div className="container border-b-2 w-[820px] mt-14">
           <h3 className="font-light text-[24px]">ADICIONALES</h3>
         </div>
         <div className="grid grid-cols-3 gap-3 mt-6">
@@ -167,9 +189,64 @@ const DetailProyecto = () => {
             </div>
           ))}
         </div>
+        <div className="container border-b-2 w-[820px] mt-14">
+          <h3 className="font-light text-[24px]">UNIDADES</h3>
+        </div>
+        <div className="bg-gray-300 rounded-t-[8px] h-14 mt-5 items-center flex justify-between gap-6">
+          <p className="text-[14px] font-semibold grow text-center ml-6">
+            Direccion
+          </p>
+          <p className="text-[14px] font-semibold">Ambientes</p>
+          <p className="text-[14px] font-semibold">Dormitorios</p>
+          <p className="text-[14px] font-semibold w-20 text-center">
+            Superficie Cubierta
+          </p>
+          <p className="text-[14px] font-semibold w-20 text-center">
+            Superficie Total
+          </p>
+          <p className="text-[14px] font-semibold">Cochera</p>
+          <p className="text-[14px] font-semibold w-20 text-center">Venta</p>
+          <p className="text-[14px] font-semibold mr-4">Alquiler</p>
+        </div>
+        <div className=" container ">
+          {propiedades.map((propiedad, index) => (
+            <div key={index} className=" flex justify-between mt-4 ">
+              <p className="text-center w-28 ml-4 text-[13px]">
+                {propiedad.direccion}
+              </p>
+              <p className="text-center w-28 ml-2 text-[13px]">
+                {propiedad.ambientes}
+              </p>
+              <p className="text-center w-28 ml-[-16px] text-[13px]">
+                {propiedad.dormitorios}
+              </p>
+              <p className="text-center w-28  text-[13px]">
+                {propiedad.supCubierta}
+              </p>
+              <p className="text-center w-28 mr-[-14px] text-[13px]">
+                {propiedad.supTotal}
+              </p>
+              <p className="text-center w-28 mr-[-8px] text-[13px]">
+                {propiedad.cochera}
+              </p>
+              <p className="text-center w-28 mr-[-23px] text-[13px]">
+                {propiedad.venta}
+              </p>
+              <p className="text-center w-28 mr-[-10px] text-[13px]">
+                {propiedad.alquiler}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="container border-b-2 w-[1200px] mt-14">
+          <h3 className="font-light text-[24px]">UBICACION</h3>
+        </div>
+        <div className="w-[1200px] h-[527px]">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.657712336673!2d-57.53698262467246!3d-38.00844364518844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dc3ee8a51277%3A0x4ab043cc1d6191ad!2sAv.%20Patricio%20Peralta%20Ramos%203100%2C%20B7600JVS%20Mar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1697220202349!5m2!1ses-419!2sar" width="1200px" height="527px" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="mt-4"></iframe>
+        </div>
       </div>
-      <div>
-        <div className="mt-16 text-left pl-[5px] flex justify-between items-center">
+      <div className="conatiner w-[1200px] mr-4">
+        <div className="mt-24 text-left  flex justify-between items-center">
           <h1 className="text-[24px] h-[28px] font-light">
             <span className="text-[32px] h-[38px] text-black font-bold mr-3">
               Sub Proyectos{" "}
