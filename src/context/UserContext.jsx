@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react'
+"use client"
+import React, { createContext, useContext, useState } from 'react'
 
 export const UserContext = createContext(); 
 
@@ -13,3 +14,5 @@ const UserProvider = ({children}) => {
     )
 }
 export default UserProvider;
+
+export const useUserContext = () => useContext(UserContext) //---> Hook exportador de estados

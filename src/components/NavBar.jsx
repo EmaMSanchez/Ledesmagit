@@ -1,5 +1,6 @@
 "use client"
 
+import { useUserContext } from '@/context/UserContext';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
@@ -12,12 +13,15 @@ const Cabecero = () => {
     return active === ruta || active.startsWith(ruta + "/");
   }
 
+  const {user, setUser} = useUserContext() //---> Hook de estados globales, se desestructura el estado y seteador
+
   const navigate = useRouter(); //Hook similar a react 6.4 useNavigate -> Permite pushear a direcciones segun condicionales
 
 const redirect = () =>{
  // user? navigate.push(`/${userState}/userProfile`) : navigate.push("/logIn") -> Si esta loggeado lo lleva a perfil de usuario, si no lo esta, lo lleva a login
  navigate.push("/");
 }
+
 
 return (
   <>
