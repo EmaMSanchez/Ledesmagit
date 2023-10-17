@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
-const Cabecero = () => {
+const CabeceroUser = () => {
 
   const active = usePathname();
   const isActive = (ruta) => {
@@ -31,7 +31,7 @@ return (
           <h1 className=' text-xl font-sans'><span className=' font-bold'>H.Ledesma</span> Desarrollos</h1>
         </div>
         <div className="flex items-center ml-auto ">
-          <Link href="/logIn" className={` hover:bg-blue-500 font-normal rounded-full hover:text-white py-1 px-6 border-2 hover:border-transparent text-xs ${isActive("/logIn") ? "bg-blue-500 text-white border-blue-500" : "bg-transparent text-black border-black"}`}>
+          <Link href="/logIn" className={` hover:bg-blue-500 font-normal rounded-full hover:text-white py-1 px-6 border-2 hover:border-transparent text-xs ${isActive("/logIn") ? "bg-blue-500 text-white" : "bg-transparent text-black border-black"}`}>
             INGRESAR
           </Link>
         </div>
@@ -47,4 +47,4 @@ return (
 )
 
 }
-export default Cabecero;
+export default CabeceroUser;
