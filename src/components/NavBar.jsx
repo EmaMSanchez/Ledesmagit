@@ -22,7 +22,6 @@ const redirect = () =>{
  navigate.push("/");
 }
 
-
 return (
   <>
     <nav className="bg-white ">
