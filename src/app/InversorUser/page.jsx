@@ -9,7 +9,7 @@ import React from 'react'
 
 const page = () => {
   const {user,setUser} = useUserContext();
-
+  console.log(user);
   return (
     <main className="flex flex-col items-center p-16">
      <div className="container border border-gray-400 w-[1000px] bg-gray-100 rounded-[30px] ">

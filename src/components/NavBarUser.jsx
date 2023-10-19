@@ -18,7 +18,7 @@ const CabeceroUser = () => {
   const navigate = useRouter(); //Hook similar a react 6.4 useNavigate -> Permite pushear a direcciones segun condicionales
 
 const redirect = () =>{
- // user? navigate.push(`/${userState}/userProfile`) : navigate.push("/logIn") -> Si esta loggeado lo lleva a perfil de usuario, si no lo esta, lo lleva a login
+ // user? navigate.push(`/${userState}/userProfile`) : navigate.push("/logIn") -> Si esta logueado lo lleva a perfil de usuario, si no lo esta, lo lleva a login
  navigate.push("/");
 }
 
@@ -28,7 +28,7 @@ return (
     <nav className="bg-white ">
       <div className="container flex justify-start gap-9 p-4">
         <div className='flex items-center mx-48 '>
-          <h1 className=' text-xl font-sans'><span className=' font-bold'>H.Ledesma</span> Desarrollos</h1>
+          <h1 className=' text-xl font-sans'><span className=' font-bold'>H.Ledesma</span> Desarrollos Usuario Logueado</h1>
         </div>
         <div className="flex items-center ml-auto ">
           <Link href="/logIn" className={` hover:bg-blue-500 font-normal rounded-full hover:text-white py-1 px-6 border-2 hover:border-transparent text-xs ${isActive("/logIn") ? "bg-blue-500 text-white" : "bg-transparent text-black border-black"}`}>
