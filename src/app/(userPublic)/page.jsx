@@ -16,7 +16,7 @@ export default function Home() {
       <ImagenPrueba/>
       </div>
       </div>
-      <Buscador/>
+      <Buscador ruta={"/"}/>
      </div>
      <div className="container w-[1000px]">
       <div className=" mt-16 text-left pl-[5px] flex justify-between">

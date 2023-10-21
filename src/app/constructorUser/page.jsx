@@ -7,14 +7,14 @@ import { useUserContext } from '@/context/UserContext'
 import React from 'react'
 
 
-const inversorPage = () => {
+const constructorPage = () => {
   const {user,setUser} = useUserContext();
-  console.log(user);
+
   return (
     <main className="flex flex-col items-center p-16">
      <div className="container border border-gray-400 w-[1000px] bg-gray-100 rounded-[30px] ">
       <div className="flex justify-between pl-9 overflow-visible">
-       <h1 className="text-[64px] mt-10 inline-block">Titulo H1 Desarrollos User Inversor</h1>
+       <h1 className="text-[64px] mt-10 inline-block">Titulo H1 Desarrollos Maestro Mayor de Obras</h1>
       </div>
       <div className="flex justify-between pl-9 gap-7 ">
        <h2 className="text-[36px] text-gray-400/75 pt inline-block">Sub titulo H2 descripcion y atencion User Default</h2>
@@ -22,7 +22,7 @@ const inversorPage = () => {
       <ImagenPrueba/>
       </div>
       </div>
-      <Buscador ruta={"inversorUser/"}/>
+      <Buscador ruta={"obrasUser/"}/>
      </div>
      <div className="container w-[1000px]">
       <div className=" mt-16 text-left pl-[5px] flex justify-between">
@@ -57,4 +57,4 @@ const inversorPage = () => {
   )
 }
 
-export default inversorPage
+export default constructorPage
