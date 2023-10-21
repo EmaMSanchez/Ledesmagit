@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const LogIn = () => {
-
   const navigate = useRouter()
 
    const {user, setUser} = useUserContext()
@@ -13,10 +12,10 @@ const LogIn = () => {
    const handleState = (estado) =>{
     setUser(estado);
     if(estado == "supUser"){
-     navigate.push('/superUser')
+     navigate.push('/agenteUser')
     }else if(estado == "maestro"){
-     navigate.push('/obrasUser')
-    }else if (estado == "user") {
+     navigate.push('/constructorUser')
+    }else if (estado == "userlog") {
      navigate.push('/inversorUser')
     }else{
       
@@ -30,7 +29,7 @@ const LogIn = () => {
     <h1>LogIn</h1>
     <div className='container flex justify-center gap-6'>
         
-          <button onClick={()=>handleState("user")} className='rounded-full bg-black text-white w-28'>User</button>
+          <button onClick={()=>handleState("userlog")} className='rounded-full bg-black text-white w-28'>User</button>
           <button onClick={()=>handleState("maestro")} className='rounded-full bg-black text-white w-28'>Maestro</button>
           <button onClick={()=>handleState("supUser")} className='rounded-full bg-black text-white w-28'>Super User</button>
           <button onClick={()=>handleState(null)} className='rounded-full bg-black text-white w-28'>Log Out</button>

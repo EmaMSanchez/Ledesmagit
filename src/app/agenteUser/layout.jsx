@@ -1,13 +1,13 @@
 import RutaPrivada from "@/components/RutaPrivada";
 import "../globals.css";
-import CabeceroUser from "@/components/NavBarUser";
+import CabeceroSuper from "@/components/NavBarSuper";
 
-export default function UserLayout({ children }) {
-  const tipoUser = "userlog";
+export default function SuperLayout({ children }) {
+  const tipoUser = "supUser";
   return (
     <>
       <RutaPrivada tipoUser={tipoUser}>
-        <CabeceroUser />
+        <CabeceroSuper />
         {children}
       </RutaPrivada>
     </>
