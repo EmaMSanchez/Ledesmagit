@@ -27,7 +27,7 @@ const constructorPage = () => {
      <div className="container w-[1000px]">
       <div className=" mt-16 text-left pl-[5px] flex justify-between">
         <h1 className="text-[24px] h-[28px] font-light"><span className="text-[32px] h-[38px] text-black font-bold mr-3">Proyectos</span> Lo màs destacado</h1>
-        <div className="flex items-center">
+        <div className="flex items-center mb-[-25px]">
     <p className="text-[14px] font-normal mr-2">LO MAS DESTACADO</p>
     <img src="/pngwing.com.png" className="w-[7.7px]" alt="Icono" />
   </div>
@@ -42,7 +42,7 @@ const constructorPage = () => {
     <span className="text-[32px] h-[38px] text-black font-bold mr-3">Sub Proyectos </span>  
     Últimos disponibles
   </h1>
-  <div className="flex items-center">
+  <div className="flex items-center mb-[-25px]">
     <p className="text-[14px] font-normal mr-2">ÚLTIMOS DISPONIBLES</p>
     <img src="/pngwing.com.png" className="w-[7.7px]" alt="Icono" />
   </div>
