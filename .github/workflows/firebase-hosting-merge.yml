@@ -18,3 +18,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HLEDESMA_D9503 }}'
           channelId: live
           projectId: hledesma-d9503
+          env:
+            FIREBASE_CLI_EXPERIMENTS: webframeworks
