@@ -1,0 +1,10 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/superUser/page": "app/superUser/page.js",
+  "/(userPublic)/page": "app/(userPublic)/page.js",
+  "/(userPublic)/logIn/page": "app/(userPublic)/logIn/page.js",
+  "/(userPublic)/searchPage/page": "app/(userPublic)/searchPage/page.js",
+  "/(userPublic)/searchPage/detailDesarrollo/page": "app/(userPublic)/searchPage/detailDesarrollo/page.js",
+  "/(userPublic)/searchPage/detailProyecto/page": "app/(userPublic)/searchPage/detailProyecto/page.js"
+}
