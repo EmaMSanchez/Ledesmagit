@@ -7,17 +7,18 @@
     color: black;
     font-weight: bold;
 }
+
 .placeholderImage {
-    background-image: url('/busqueda.png');
-    background-repeat: no-repeat;
+  background-image: url('/busqueda.png');
+  background-repeat: no-repeat;
   background-position: 14px ;
   background-size: 20px 20px; /* Ajusta esto a las dimensiones deseadas */
-  }
+}
 
-  .placeholderImage2 {
-    background-image: url('/busqueda.png');
-    background-repeat: no-repeat;
+.placeholderImage2 {
+  background-image: url('/busqueda.png');
+  background-repeat: no-repeat;
   background-position: 10px ;
   background-size: 28px 28px; /* Ajusta esto a las dimensiones deseadas */
-  }
+}
  

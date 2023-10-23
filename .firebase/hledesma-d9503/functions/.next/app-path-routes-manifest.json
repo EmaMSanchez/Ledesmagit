@@ -1,0 +1,10 @@
+{
+  "/_not-found": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/superUser/page": "/superUser",
+  "/(userPublic)/page": "/",
+  "/(userPublic)/logIn/page": "/logIn",
+  "/(userPublic)/searchPage/page": "/searchPage",
+  "/(userPublic)/searchPage/detailDesarrollo/page": "/searchPage/detailDesarrollo",
+  "/(userPublic)/searchPage/detailProyecto/page": "/searchPage/detailProyecto"
+}

@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/.firebase/hledesma-d9503/functions/node_modules
 
 # testing
 /coverage

@@ -1,6 +1,7 @@
 import CardSubProyectos from "@/components/CardSubProyectos";
 import ImagenPrueba from "@/components/ImagenPrueba";
 import React from "react";
+import Image from "next/image";
 
 const DetailProyecto = () => {
   const tituloProyecto = "Titulo H1 proyecto";
@@ -16,6 +17,7 @@ const DetailProyecto = () => {
     "-Camaras de seguridad",
     "-Ceraduras electronicas",
   ];
+
   const servicios = [
     "Agua corriente",
     "Pavimento",
@@ -41,39 +43,46 @@ const DetailProyecto = () => {
     "Cochera Fija",
     "Ascensor",
   ];
-
+  
   const subImagenes = [
-    <img
+    <Image
       src=""
-      alt=""
+      key="1"
+      alt="a"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
-    <img
+    <Image
       src=""
-      alt=""
+      key="2"
+      alt="b"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
-    <img
+    <Image
       src=""
-      alt=""
+      key="3"
+      alt="c"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
-    <img
+    <Image
       src=""
-      alt=""
+      key="4"
+      alt="d"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
-    <img
+    <Image
       src=""
-      alt=""
+      key="5"
+      alt="e"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
-    <img
+    <Image
       src=""
-      alt=""
+      key="6"
+      alt="f"
       className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
     />,
   ];
+  
   const propiedades = [
     {
       direccion: "Libertad 4838",
@@ -121,7 +130,7 @@ const DetailProyecto = () => {
       <div className="container">
         <div className="container flex items-center justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200">
           {imagenPrincipal}
-          {/* <img src="" alt="" /> */}
+          {/* <Image src="" alt="" /> */}
         </div>
         <div className="container flex justify-center mt-4 gap-4">
           {subImagenes}
@@ -173,7 +182,7 @@ const DetailProyecto = () => {
         <div className="grid grid-cols-3 gap-3 mt-6">
           {servicios.map((servicio, index) => (
             <div key={index} className="flex items-center">
-              <img src="/comprobar.png" className="w-[12px] mr-2" />
+              <Image src="/comprobar.png" width="12" height="12" className="w-[12px] mr-2" />
               <p>{servicio}</p>
             </div>
           ))}
@@ -184,7 +193,7 @@ const DetailProyecto = () => {
         <div className="grid grid-cols-3 gap-3 mt-6">
           {adicionales.map((adicional, index) => (
             <div key={index} className="flex items-center">
-              <img src="/comprobar.png" className="w-[12px] mr-2" />
+              <Image alt="Verificar" src="/comprobar.png" width="12" height="12" className="w-[12px] mr-2" />
               <p>{adicional}</p>
             </div>
           ))}
@@ -255,7 +264,7 @@ const DetailProyecto = () => {
           </h1>
           <div className="flex items-center mt-9">
             <p className="text-[14px] font-normal mr-2">ÚLTIMOS DISPONIBLES</p>
-            <img src="/pngwing.com.png" className="w-[7.7px]" alt="Icono" />
+            <Image src="/pngwing.com.png" width="7" height="7" className="w-[7.7px]" alt="Icono" />
           </div>
         </div>
         <div className="container flex justify-between mt-14 gap-12 ">

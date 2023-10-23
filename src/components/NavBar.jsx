@@ -4,6 +4,7 @@ import { useUserContext } from '@/context/UserContext';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
+import Image from "next/image";
 import React from 'react'
 
 const Cabecero = () => {
@@ -36,7 +37,7 @@ return (
         </div>
         <div className="flex items-center">
           <button type="button" className="flex mr-3 text-sm bg-white rounded-full focus:ring-gray-300" id="user-menu-button" onClick={redirect}>
-            <img className="w-8 h-8 rounded-full" src='/perfil.com.png' alt="user photo" />
+            <Image className="w-8 h-8 rounded-full" width="8" height="8" src='/perfil.com.png' alt="user photo" />
           </button>
         </div>
       </div>

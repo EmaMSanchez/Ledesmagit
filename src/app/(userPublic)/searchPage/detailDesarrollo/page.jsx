@@ -1,5 +1,6 @@
 import ImagenPrueba from "@/components/ImagenPrueba";
 import React from "react";
+import Image from "next/image";
 
 const DetailDesarrollo = () => {
   
@@ -8,47 +9,53 @@ const DetailDesarrollo = () => {
   const imagenPrincipal = <ImagenPrueba />;
 
   const lines = [
-           "-Carpinteria exterior",
-           "-Piso porcelanato",
-           "-Calefaccion centralizada",
-           "-Sistema contra incendios",
-           "-Camaras de seguridad",
-           "-Ceraduras electronicas"
+    "-Carpinteria exterior",
+    "-Piso porcelanato",
+    "-Calefaccion centralizada",
+    "-Sistema contra incendios",
+    "-Camaras de seguridad",
+    "-Ceraduras electronicas"
   ];
-
+  
   const subImagenes = [
-    <img
-            src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />,
-          <img
-          src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />,
-          <img
-          src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />,
-          <img
-          src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />,
-          <img
-          src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />,
-          <img
-          src="#"
-            alt=""
-            className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-          />
+    <Image
+      src="#"
+      key="1"
+      alt="a"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />,
+    <Image
+      src="#"
+      key="2"
+      alt="b"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />,
+    <Image
+      src="#"
+      key="3"
+      alt="c"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />,
+    <Image
+      src="#"
+      key="4"
+      alt="d"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />,
+    <Image
+      src="#"
+      key="5"
+      alt="e"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />,
+    <Image
+      src="#"
+      key="6"
+      alt="f"
+      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
+    />
   ];
-
+  
   const servicios = [
     "Agua corriente",
     "Pavimento",
@@ -128,8 +135,9 @@ const DetailDesarrollo = () => {
       <div className="container">
         <div className="container flex items-center justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200">
           {imagenPrincipal}
-          {/* <img src={} alt="" /> */}
+          {/* <Image src={} alt="" /> */}
         </div>
+        
         <div className="container flex justify-center mt-4 gap-4">
           {subImagenes}
         </div>
@@ -175,7 +183,7 @@ const DetailDesarrollo = () => {
 <div className="grid grid-cols-3 gap-3 mt-6">
   {servicios.map((servicio, index) => (
     <div key={index} className="flex items-center">
-      <img src="/comprobar.png" className="w-[12px] mr-2" />
+      <Image alt="Verificar" src="/comprobar.png" width="12" height="12" className="w-[12px] mr-2" />
       <p>{servicio}</p>
     </div>
   ))}
@@ -186,7 +194,7 @@ const DetailDesarrollo = () => {
         <div className="grid grid-cols-3 gap-3 mt-6">
   {adicionales.map((adicional, index) => (
     <div key={index} className="flex items-center">
-      <img src="/comprobar.png" className="w-[12px] mr-2" />
+      <Image alt="Verificar" src="/comprobar.png" width="12" height="12" className="w-[12px] mr-2" />
       <p>{adicional}</p>
     </div>
   ))}
