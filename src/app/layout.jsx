@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-import Cabecero from '@/components/NavBar'
-import UserProvider from '@/context/UserContext'
+import { Inter } from 'next/font/google';
+import UserProvider from '@/context/UserContext';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
       {children}
-      <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+      <Script src="../path/to/flowbite/dist/flowbite.min.js" />
       </body>
     </html>
     </UserProvider>
