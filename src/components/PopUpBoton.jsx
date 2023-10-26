@@ -4,21 +4,37 @@ import { Modal } from "flowbite-react";
 
 const BotonPopUp = () => {
   const [openModal, setOpenModal] = useState();
-  const props = { openModal, setOpenModal };
-  const datos = [
+  const props = { openModal, setOpenModal }; //Estado popUp (activo, inactivo)
+
+
+  const datos = [ //Arreglo de datos
     {
       titulo: "Avance en Pisos",
       fecha: "26 de Oct 2023",
       comentario: "Se coloco con exito los ceramicos del piso.",
       comentario2: "Se cumplio con el tiempo esperado sin inconvenientes.",
+      activo: true,
     },
     {
       titulo: "Avance en Pisos2",
       fecha: "26 de Oct 2023",
       comentario: "Se coloco con exito los ceramicos del piso.",
       comentario2: "Se cumplio con el tiempo esperado sin inconvenientes.",
+      activo: true,
     },
+    {
+      titulo: "Avance en Pisos3",
+      fecha: "26 de Oct 2023",
+      comentario: "Se coloco con exito los ceramicos del piso.",
+      comentario2: "Se cumplio con el tiempo esperado sin inconvenientes.",
+      activo: false,
+    },
+    
   ];
+  
+  const datosFiltrados = datos.filter((dato) => dato.activo === true); //Filtra del arreglos aquellos que tengan novedades (boolean true)
+
+  const activo = datos.some((dato) => dato.activo === true ); //Si al menos 1 objeto cumple la condicion se activa alerta
 
   return (
     <>
@@ -30,7 +46,9 @@ const BotonPopUp = () => {
             src="/campana-de-notificacion.png"
             alt="alerta"
           />
-          <span className="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+          {
+           activo && <span className="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span> //Alerta
+          }
         </div>
       </button>
 
@@ -63,7 +81,7 @@ const BotonPopUp = () => {
         </Modal.Header>
 
         <Modal.Body>
-          {datos.map((dato, index) => (
+          {datosFiltrados.map((dato, index) => (
             <div
               key={index}
               className="border-b-[1px] border-gray-300 py-4 justify-start"
