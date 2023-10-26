@@ -1,6 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
-import Boton from './Boton'
+import React from 'react';
+import Boton from './Boton';
 
 const Buscador = ({ruta}) => {
   
@@ -17,4 +16,4 @@ const Buscador = ({ruta}) => {
   
 }
 
-export default Buscador
+export default Buscador;
