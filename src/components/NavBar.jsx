@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import React from "react";
+import BotonPopUp from "./PopUpBoton";
+
 
 const Cabecero = () => {
   const active = usePathname();
@@ -45,16 +47,7 @@ const Cabecero = () => {
           </div>
           {
           user  && 
-            <div class="relative">
-              <Image
-                className="w-8 h-8 rounded-full"
-                width="8"
-                height="8"
-                src="/campana-de-notificacion.png"
-                alt="alerta"
-              />
-              <span class="top-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
-            </div>
+          <BotonPopUp/>
           }
           <div className="flex items-center">
             <button

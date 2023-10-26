@@ -15,7 +15,7 @@ const CardSubProyectos = () => {
     <div className='w-[360px] h-[470px] bg-gray-100 rounded-[14px]'>
       <div className='rounded-t-[14px] overflow-hidden h-32 bg-gray-200' style={divStyle}> {/*Modificar por Image */}
        {
-          user !== null && 
+          user && 
           <div className='flex justify-end'>
           <div className='bg-yellow-300 rounded-bl-[14px] rounded-tr-[14px] text-center w-[131px] h-[24px]'>NOVEDADES</div>
           </div>
