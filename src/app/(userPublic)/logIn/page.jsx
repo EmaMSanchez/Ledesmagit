@@ -36,8 +36,8 @@ const LogIn = () => {
 
   const handleLogin = async () => {
     await signInWithEmailAndPassword(auth, email, pass);
-    setEmail('');
-    setPass('');
+    setEmail('a');
+    setPass('a');
   }
   
 
