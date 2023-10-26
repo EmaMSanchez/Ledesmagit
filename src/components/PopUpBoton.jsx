@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Modal } from "flowbite-react";
+import Link from "next/link";
 
 const BotonPopUp = () => {
   const [openModal, setOpenModal] = useState();
@@ -82,8 +83,9 @@ const BotonPopUp = () => {
 
         <Modal.Body>
           {datosFiltrados.map((dato, index) => (
+            <Link href={"#"} key={index}>
             <div
-              key={index}
+              
               className="border-b-[1px] border-gray-300 py-4 justify-start"
             >
               <h1 className="font-semibold">{dato.titulo}</h1>
@@ -95,6 +97,7 @@ const BotonPopUp = () => {
                 {dato.comentario2}
               </p>
             </div>
+            </Link>
           ))}
         </Modal.Body>
         <Modal.Footer>
