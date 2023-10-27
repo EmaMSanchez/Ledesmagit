@@ -4,6 +4,38 @@ import CardSubProyectos from "@/components/CardSubProyectos";
 import ImagenPrueba from "@/components/ImagenPrueba";
 
 export default function Home() {
+
+  const datosCards = [ //Arreglo de datos
+  {
+    imagen: `url("/images.jpg")`,
+    categoria: "Categoria 1",
+    proyecto: "Unkanny Tower",
+    tituloSub: "Título del Sub proyecto",
+    descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
+    valor:"12345",
+    activo: true,
+  },
+  {
+    imagen: `url("/images.jpg")`,
+    categoria: "Categoria 2",
+    proyecto: "Unkanny Residences",
+    tituloSub: "Título del Sub proyecto",
+    descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, no incluye cochera",
+    valor:"54321",
+    activo: false,
+  },
+  {
+    imagen: `url("/images.jpg")`,
+    categoria: "Categoria 3",
+    proyecto: "Unkanny Residences",
+    tituloSub: "Título del Sub proyecto",
+    descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
+    valor:"13542",
+    activo: true,
+  },
+  
+];
+
  return (
     <main className="flex flex-col items-center p-16">
      <div className="container border border-gray-400 w-[1000px] bg-gray-100 rounded-[30px] ">
@@ -42,9 +74,10 @@ export default function Home() {
   </div>
 </div>
        <div className="container flex justify-between mt-14 gap-12 ">
-            <CardSubProyectos/>
-            <CardSubProyectos/>
-            <CardSubProyectos/>
+          {
+            datosCards.map((datocard) =>
+            <CardSubProyectos datocard={datocard}/>
+            )} 
        </div>
      </div>
     </main>

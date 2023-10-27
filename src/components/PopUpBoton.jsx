@@ -83,7 +83,7 @@ const BotonPopUp = () => {
 
         <Modal.Body>
           {datosFiltrados.map((dato, index) => (
-            <Link href={"#"} key={index}>
+            <Link href={"#"} key={index}> {/*Se debe cambiar el # por el path dinamico */}
             <div
               
               className="border-b-[1px] border-gray-300 py-4 justify-start"
