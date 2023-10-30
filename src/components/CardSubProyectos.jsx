@@ -6,15 +6,11 @@ import React from 'react'
 
 const CardSubProyectos = ({datocard}) => {
 
-  const divStyle = {
-    backgroundImage: `url("/images.jpg")`, //Imagen dinamica aca del fondo de la card
-    backgroundSize: 'cover', // Ajusta la imagen al tamaño del contenedor
-  };
   const {user, setUser} = useUserContext();
  
   return (
-    <div className='w-[360px] h-[470px] bg-gray-100 rounded-[14px]'>
-      <div className='rounded-t-[14px] overflow-hidden h-32 bg-gray-200' style={divStyle}> {/*Modificar por Image */}
+    <div className='w-[360px] h-[470px] bg-gray-100 rounded-[14px] '>
+      <div className='rounded-t-[14px]  h-32 bg-gray-200 bg-no-repeat bg-cover transition-all duration-1000'  style={{ backgroundImage: `url(${datocard.imagen})` }}> {/*Modificar por Image */}
        {
           user && datocard.activo && //Card de Novedades -> si es true muestra el cartel
           <div className='flex justify-end'>

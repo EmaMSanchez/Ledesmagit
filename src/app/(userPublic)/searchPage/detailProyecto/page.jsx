@@ -3,6 +3,45 @@ import ImagenPrueba from "@/components/ImagenPrueba";
 import React from "react";
 import Image from "next/image";
 
+const proyecto = () => (  //Proyecto que nos llega
+  {
+  proyectoInmobiliario: "Proyecto inmobiliario3",
+  nombreAgente: "Agente",
+  numDisponibles: "20",
+  numInversores:"17",
+  imagenCard:"/card4.jpg",
+  subProyectos:
+    [
+      {
+      imagen: `url("/images.jpg")`,
+      categoria: "Categoria 1",
+      proyecto: "DIMORA TORREON",
+      tituloSub: "Título del Sub proyecto",
+      descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
+      valor:"12345",
+      activo: false,
+    },
+    {
+      imagen: `url("/images.jpg")`,
+      categoria: "Categoria 2",
+      proyecto: "DIMORA TORREON",
+      tituloSub: "Título del Sub proyecto",
+      descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, no incluye cochera",
+      valor:"54321",
+      activo: true,
+    },
+    {
+      imagen: `url("/images.jpg")`,
+      categoria: "Categoria 3",
+      proyecto: "DIMORA TORREON",
+      tituloSub: "Título del Sub proyecto",
+      descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
+      valor:"13542",
+      activo: true,
+    },
+],
+    })
+
 const DetailProyecto = () => {
   const tituloProyecto = "Titulo H1 proyecto";
   const subTituloProyecto =
