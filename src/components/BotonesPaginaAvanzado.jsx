@@ -13,8 +13,8 @@ const BotonesPaginaAvanzado = () => {
     <>
       <div className=" flex justify-center gap-8 items-center  bg-gray-500/40 rounded-full mt-6 h-[40px] w-[332px]">
        
-          <button onClick={()=>handleState(true)} className={`w-[145px] h-[30px] ${active? "bg-white  rounded-l-full" : ""}`} >PROYECTO</button>
-          <button onClick={()=>handleState(false)} className={`w-[145px] h-[30px] ${active? "" : "bg-white rounded-r-full"}`}>SUBPROYECTO</button>
+          <button onClick={()=>handleState(true)} className={`w-[145px] h-[30px] transition-all duration-1000 ${active? "bg-white  rounded-l-full" : ""}`} >PROYECTO</button>
+          <button onClick={()=>handleState(false)} className={`w-[145px] h-[30px] transition-all duration-1000 ${active? "" : "bg-white rounded-r-full"}`}>SUBPROYECTO</button>
         
       </div>
       {active ? (

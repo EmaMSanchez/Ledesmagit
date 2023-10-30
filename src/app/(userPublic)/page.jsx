@@ -1,130 +1,14 @@
 "use client"
+
 import Buscador from "@/components/Buscador";
 import CardDestacado from "@/components/CardDestacado";
 import CardSubProyectos from "@/components/CardSubProyectos";
+import { DATOSCARDS } from "@/mock/datosFicticios";
 import { useEffect, useState } from "react";
 
 export default function Home() {
 
-  const datosCards = [ //Arreglo de datos
-  {
-    proyectoInmobiliario: "Proyecto inmobiliario",
-    nombreAgente: "Agente",
-    numDisponibles: "10",
-    numInversores:"15",
-    imagenCard:"/card2.jpg",
-    subProyectos:
-      [
-        {
-        imagen: "/card2.jpg",
-        categoria: "Categoria 1",
-        proyecto: "Unkanny Tower",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"12345",
-        activo: true,
-      },
-      {
-        imagen: "/card2.jpg",
-        categoria: "Categoria 2",
-        proyecto: "Unkanny Tower",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, no incluye cochera",
-        valor:"54321",
-        activo: false,
-      },
-      {
-        imagen: "/card2.jpg",
-        categoria: "Categoria 3",
-        proyecto: "Unkanny Tower",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"13542",
-        activo: true,
-      },
-  ], 
- 
-  },
-
-  {
-    proyectoInmobiliario: "Proyecto inmobiliario2",
-    nombreAgente: "Agente",
-    numDisponibles: "20",
-    numInversores:"12",
-    imagenCard:"/card3.jpg",
-    subProyectos:
-      [
-        {
-        imagen: "/card3.jpg",
-        categoria: "Categoria 1",
-        proyecto: "Unkanny Residences",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"12345",
-        activo: true,
-      },
-      {
-        imagen: "/card3.jpg",
-        categoria: "Categoria 2",
-        proyecto: "Unkanny Residences",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, no incluye cochera",
-        valor:"54321",
-        activo: false,
-      },
-      {
-        imagen: "/card3.jpg",
-        categoria: "Categoria 3",
-        proyecto: "Unkanny Residences",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"13542",
-        activo: false,
-      },
-  ], 
-
-  },
-
-  {
-    proyectoInmobiliario: "Proyecto inmobiliario3",
-    nombreAgente: "Agente",
-    numDisponibles: "20",
-    numInversores:"17",
-    imagenCard:"/card4.jpg",
-    subProyectos:
-      [
-        {
-        imagen: "/images.jpg",
-        categoria: "Categoria 1",
-        proyecto: "DIMORA TORREON",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"12345",
-        activo: false,
-      },
-      {
-        imagen: "/images.jpg",
-        categoria: "Categoria 2",
-        proyecto: "DIMORA TORREON",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, no incluye cochera",
-        valor:"54321",
-        activo: true,
-      },
-      {
-        imagen: "/images.jpg",
-        categoria: "Categoria 3",
-        proyecto: "DIMORA TORREON",
-        tituloSub: "Título del Sub proyecto",
-        descripcion: "Descripcion - Edificio frente al mar con pileta y quincho, incluye cochera",
-        valor:"13542",
-        activo: true,
-      },
-  ],
-      
-  },
-
-];
+  const datosCards = DATOSCARDS;
 
  
  const [datoProy, setDatoProy] = useState(datosCards[0]) //Se setea valor default el primer proyecto
@@ -151,7 +35,7 @@ export default function Home() {
       </div>
       <Buscador ruta={"/"}/>
      </div>
-     <div className="container">
+     <div className="container mx-auto">
       <div className=" mt-16 text-left pl-[5px] flex justify-between">
         <h1 className="text-[24px] h-[28px] font-light ml-1"><span className="text-[32px] h-[38px] text-black font-bold mr-3">Proyectos</span> Lo màs destacado</h1>
         <div className="flex items-center mb-[-25px] mr-4">

@@ -2,7 +2,7 @@ import ImagenPrueba from "@/components/ImagenPrueba";
 import React from "react";
 import Image from "next/image";
 
-const DetailDesarrollo = () => {
+const DetailDesarrollo = ({params}) => { //Dentro de params nos llega el objeto a mostrar desde <Link> capturado por el path []
   
   const tituloProyecto = "Titulo H1 Sub proyecto";
   const subTituloProyecto = " Sub Titulo H2 Descripcion y atencion en unas lineas.";

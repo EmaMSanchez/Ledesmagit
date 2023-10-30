@@ -42,7 +42,7 @@ const proyecto = () => (  //Proyecto que nos llega
 ],
     })
 
-const DetailProyecto = () => {
+const DetailProyecto = ({params}) => { //Dentro de params nos llega el objeto a mostrar desde <Link> capturado por el path []
   const tituloProyecto = "Titulo H1 proyecto";
   const subTituloProyecto =
     "Sub Titulo H2 Descripcion y atencion en unas lineas.";
