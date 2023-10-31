@@ -70,7 +70,7 @@ export default function Home() {
        <div className="container grid grid-cols-3 mt-14 gap-12 ">
           {
             datoProy.subProyectos.map((datocard,index) =>
-            <CardSubProyectos datocard={datocard} key={index}/>
+            <CardSubProyectos datocard={datocard} indP={datoProy.id} key={index}/>
             )} 
        </div>
      </div>

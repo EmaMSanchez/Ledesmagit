@@ -1,6 +1,6 @@
 export const DATOSCARDS = [ 
 {
-  id: "0",
+  id: "1",
   proyectoInmobiliario: "Proyecto inmobiliario",
   nombreAgente: "Agente",
   numDisponibles: "10",
@@ -42,6 +42,7 @@ export const DATOSCARDS = [
   subProyectos:
     [
       {
+      id: "1",  
       imagen: "/card2.jpg",
       categoria: "Categoria 1",
       proyecto: "Unkanny Tower",
@@ -58,6 +59,7 @@ export const DATOSCARDS = [
       activo: true,
     },
     {
+      id: "2",  
       imagen: "/card2.jpg",
       categoria: "Categoria 2",
       proyecto: "Unkanny Tower",
@@ -74,6 +76,7 @@ export const DATOSCARDS = [
       activo: false,
     },
     {
+      id: "3",  
       imagen: "/card2.jpg",
       categoria: "Categoria 3",
       proyecto: "Unkanny Tower",
@@ -94,7 +97,7 @@ export const DATOSCARDS = [
 },
 
 {
-  id: "1",
+  id: "2",
   proyectoInmobiliario: "Proyecto inmobiliario2",
   nombreAgente: "Agente",
   numDisponibles: "20",
@@ -136,6 +139,7 @@ export const DATOSCARDS = [
   subProyectos:
     [
       {
+      id: "1",  
       imagen: "/card3.jpg",
       categoria: "Categoria 1",
       proyecto: "Unkanny Residences",
@@ -152,6 +156,7 @@ export const DATOSCARDS = [
       activo: true,
     },
     {
+      id: "2",
       imagen: "/card3.jpg",
       categoria: "Categoria 2",
       proyecto: "Unkanny Residences",
@@ -168,6 +173,7 @@ export const DATOSCARDS = [
       activo: false,
     },
     {
+      id: "3",
       imagen: "/card3.jpg",
       categoria: "Categoria 3",
       proyecto: "Unkanny Residences",
@@ -188,7 +194,7 @@ export const DATOSCARDS = [
 },
 
 {
-    id: "2",
+    id: "3",
     proyectoInmobiliario: "Proyecto inmobiliario3",
     nombreAgente: "Agente",
     numDisponibles: "20",
@@ -230,6 +236,7 @@ export const DATOSCARDS = [
     subProyectos:
       [
         {
+        id: "1",
         imagen: "/images.jpg",
         categoria: "Categoria 1",
         proyecto: "DIMORA TORREON",
@@ -246,6 +253,7 @@ export const DATOSCARDS = [
         activo: false,
       },
       {
+        id: "2",
         imagen: "/images.jpg",
         categoria: "Categoria 2",
         proyecto: "DIMORA TORREON",
@@ -262,6 +270,7 @@ export const DATOSCARDS = [
         activo: true,
       },
       {
+        id: "3",
         imagen: "/images.jpg",
         categoria: "Categoria 3",
         proyecto: "DIMORA TORREON",
@@ -286,6 +295,7 @@ export const DATOSCARDS = [
 
 export const DATOS_DESTACADOS = [ 
 {
+  id:"1",
   proyectoInmobiliario: "Proyecto inmobiliario",
   nombreAgente: "Agente",
   numDisponibles: "10",
@@ -294,6 +304,7 @@ export const DATOS_DESTACADOS = [
 },
 
 {
+  id:"2",
   proyectoInmobiliario: "Proyecto inmobiliario2",
   nombreAgente: "Agente",
   numDisponibles: "20",
@@ -302,6 +313,7 @@ export const DATOS_DESTACADOS = [
 },
 
 {
+  id:"3",
   proyectoInmobiliario: "Proyecto inmobiliario3",
   nombreAgente: "Agente",
   numDisponibles: "20",
@@ -310,6 +322,7 @@ export const DATOS_DESTACADOS = [
 },
 
 {
+  id:"3",
   proyectoInmobiliario: "Proyecto inmobiliario4",
   nombreAgente: "Agente",
   numDisponibles: "15",
@@ -318,6 +331,7 @@ export const DATOS_DESTACADOS = [
 },
 
 {
+  id:"3",
   proyectoInmobiliario: "Proyecto inmobiliario5",
   nombreAgente: "Agente",
   numDisponibles: "10",
@@ -325,6 +339,7 @@ export const DATOS_DESTACADOS = [
   imagenCard:"/card4.jpg",
 },
 {
+  id:"3",
   proyectoInmobiliario: "Proyecto inmobiliario6",
   nombreAgente: "Agente",
   numDisponibles: "8",

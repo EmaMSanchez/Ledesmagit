@@ -1,12 +1,17 @@
-import ImagenPrueba from "@/components/ImagenPrueba";
+"use client"
 import React from "react";
 import Image from "next/image";
+import { DATOSCARDS } from "@/mock/datosFicticios";
 
-const DetailDesarrollo = () => { //Dentro de params nos llega el objeto a mostrar desde <Link> capturado por el path []
+const DetailDesarrollo = ({params}) => { //Dentro de params nos llega el objeto a mostrar desde <Link> capturado por el path []
   
-  const tituloProyecto = "Titulo H1 Sub proyecto";
+  
   const subTituloProyecto = " Sub Titulo H2 Descripcion y atencion en unas lineas.";
-  const imagenPrincipal = <ImagenPrueba />;
+  
+   const proyecto = DATOSCARDS.find((datos) => datos.id === params.detailDesarrollo[0]); //params.detailDesarrollo[0] -> Ingresa a el arreglo de datos provenientes del path, el 0 (primero), pertenece al ID del Proyecto (edificio)
+   const subProyecto = proyecto.subProyectos.find((datos) => datos.id === params.detailDesarrollo[1]); // params.detailDesarrollo[1]); -> el 1 pertenece al dato que proviene del path del sub proyecto (id), compara con el id de los subproyectos proveniente del proyecto
+
+  
 
   const lines = [
     "-Carpinteria exterior",
@@ -17,44 +22,6 @@ const DetailDesarrollo = () => { //Dentro de params nos llega el objeto a mostra
     "-Ceraduras electronicas"
   ];
   
-  const subImagenes = [
-    <Image
-      src="#"
-      key="1"
-      alt="a"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />,
-    <Image
-      src="#"
-      key="2"
-      alt="b"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />,
-    <Image
-      src="#"
-      key="3"
-      alt="c"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />,
-    <Image
-      src="#"
-      key="4"
-      alt="d"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />,
-    <Image
-      src="#"
-      key="5"
-      alt="e"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />,
-    <Image
-      src="#"
-      key="6"
-      alt="f"
-      className=" w-[92px] h-[92px] bg-gray-300 rounded-[10px] border-[1px]"
-    />
-  ];
   
   const servicios = [
     "Agua corriente",
@@ -113,7 +80,7 @@ const DetailDesarrollo = () => { //Dentro de params nos llega el objeto a mostra
     <main className="flex flex-col items-center justify-between p-16">
       <div className="container flex gap-[250px] ml-[90px]">
         <h1 className="text-[64px] mt-10 inline-block">
-          {tituloProyecto}
+          {subProyecto.proyecto}
         </h1>
         <div className="grid grid-rows-2 grid-flow-col mt-16 gap-6 overflow-visible">
           <button className="bg-black text-white w-[177px] h-[40px] rounded-[6px] drop-shadow-lg">
@@ -133,13 +100,11 @@ const DetailDesarrollo = () => { //Dentro de params nos llega el objeto a mostra
         </h2>
       </div>
       <div className="container">
-        <div className="container flex items-center justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200">
-          {imagenPrincipal}
-          {/* <Image src={} alt="" /> */}
+        <div className="container flex items-center justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200" style={{ backgroundImage: `url(${subProyecto.imagen})` }}>
         </div>
         
         <div className="container flex justify-center mt-4 gap-4">
-          {subImagenes}
+          {/* {subImagenes} */}
         </div>
         <div className='container flex items-center justify-center mt-[60px] '>
            <button className=' rounded-[6px] h-10 w-[177px] text-center placeholderImage bg-black text-white hover:translate-y-[-2px] transition-all drop-shadow-md  hover:drop-shadow-xl'>CONTACTARSE</button>

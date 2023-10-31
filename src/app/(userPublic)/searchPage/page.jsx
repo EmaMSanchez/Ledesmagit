@@ -25,7 +25,7 @@ const SearchPage = () => {
     
             datosCards.map((datocard, index) =>(
               <button key={index} className="hover:translate-y-[-2px] transition-all hover:drop-shadow-xl">
-            <CardDestacado datocard={datocard} />
+            <CardDestacado datocard={datocard}/>
               </button>
             ))
        }

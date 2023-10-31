@@ -1,12 +1,13 @@
 "use client"
 import { useUserContext } from '@/context/UserContext';
+import Link from 'next/link';
 import React from 'react'
 
 
 
-const CardSubProyectos = ({datocard}) => {
+const CardSubProyectos = ({datocard, indP}) => {
 
-  const {user, setUser} = useUserContext();
+  const {user} = useUserContext();
  
   return (
     <div className='w-[360px] h-[470px] bg-gray-100 rounded-[14px] '>
@@ -29,7 +30,7 @@ const CardSubProyectos = ({datocard}) => {
       <p  className='font-medium text-[24.6px]'>$ {datocard.valor} </p> 
       </div>
       <div className='container flex items-center justify-center mt-[18px] '>
-        <button className=' rounded-[6px] h-10 w-44 text-center placeholderImage bg-black text-white hover:translate-y-[-2px] transition-all drop-shadow-md  hover:drop-shadow-xl'>VER MAS</button>
+        <Link href={`/searchPage/${indP}/${datocard.id}`} className=' rounded-[6px] h-10 w-44 p-2 text-center bg-black text-white hover:translate-y-[-2px] transition-all drop-shadow-md  hover:drop-shadow-xl'>VER MAS</Link>
       </div>
     </div>
   );

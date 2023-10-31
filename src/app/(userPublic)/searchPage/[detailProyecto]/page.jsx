@@ -1,4 +1,3 @@
-"use client"
 import CardSubProyectos from "@/components/CardSubProyectos";
 import React from "react";
 import Image from "next/image";
@@ -175,7 +174,7 @@ const DetailProyecto = ({params}) => { //Dentro de params nos llega el objeto a 
         <div className="container grid grid-cols-3 mt-14 gap-12 ">
           {
             proyecto.subProyectos.map((datocard,index) =>
-            <CardSubProyectos datocard={datocard} key={index}/>
+            <CardSubProyectos datocard={datocard} indP={proyecto.id} key={index}/>
             )} 
        </div>
       </div>
