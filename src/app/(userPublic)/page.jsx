@@ -12,11 +12,12 @@ export default function Home() {
 
  
  const [datoProy, setDatoProy] = useState(datosCards[0]) //Se setea valor default el primer proyecto
- 
- const handleSeleccionSubProyectos = (datos) => { //Setea datos Imagen y subProyectos
+ const [seleccion , setSeleccion] = useState(0) //De acuerdo a el orden de la iteracion del arreglo se setea la card seleccionada
+
+ const handleSeleccionSubProyectos = (datos,indice) => { //Setea datos Imagen y subProyectos
    
-    
-    setDatoProy(datos)
+    setSeleccion(indice);
+    setDatoProy(datos);
      
   }
   useEffect(()=>{
@@ -49,7 +50,7 @@ export default function Home() {
       {
    
            datosCards.map((datocard, index) =>(
-             <button key={index} className="hover:translate-y-[-2px] transition-all hover:drop-shadow-xl" onClick={()=>handleSeleccionSubProyectos(datocard)}>
+             <button key={index} className={`hover:translate-y-[-2px] transition-all duration-500 hover:drop-shadow-xl ${seleccion == index && "translate-y-[-2px] drop-shadow-xl" }`} onClick={()=>handleSeleccionSubProyectos(datocard,index)}>
            <CardDestacado datocard={datocard} />
              </button>
            ))
