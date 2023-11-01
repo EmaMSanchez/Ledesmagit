@@ -41,7 +41,7 @@ const DetailDesarrollo = ({ params }) => {
       </div>
       <div className="container">
         <div
-          className="container flex items-center justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200"
+          className="container flex justify-center w-[1200px] h-[520px] rounded-[30px] border-[1px] mt-16 bg-gray-200 bg-no-repeat bg-cover"
           style={{ backgroundImage: `url(${subProyecto.imagen})` }}
         ></div>
 
