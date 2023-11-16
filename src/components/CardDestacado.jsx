@@ -6,7 +6,8 @@ const CardDestacado = ({datocard}) => {
 
   return (
     <div className='w-[360px] h-[370px] bg-gray-100 rounded-[14px] '>
-      <div className='rounded-t-[14px] overflow-hidden h-32 bg-gray-200 bg-no-repeat bg-cover' style={{ backgroundImage: `url(${datocard.imagenCard})`}}>
+      <div className='rounded-t-[14px] overflow-hidden h-32 bg-gray-200 '>
+       <img src={datocard.imagenCard} alt="imagen" className='object-cover ' /> 
       </div>
       <div className='container ml-6 mt-5'>
         <h2 className='font-bold text-[18px] text-left'>{datocard.proyectoInmobiliario}</h2>
